@@ -10,7 +10,7 @@ namespace PWTranslator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// —водка дл€ MyForm
+	/// Summary for MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -19,13 +19,13 @@ namespace PWTranslator {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: add constructor code
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// ќсвободить все используемые ресурсы.
+		/// Release all used resources.
 		/// </summary>
 		~MyForm()
 		{
@@ -37,14 +37,14 @@ namespace PWTranslator {
 
 	private:
 		/// <summary>
-		/// ќб€зательна€ переменна€ конструктора.
+		/// Required constructor variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// “ребуемый метод дл€ поддержки конструктора Ч не измен€йте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// Required method for constructor support - do not change
+		/// the contents of this method using the code editor.
 		/// </summary>
 		void InitializeComponent(void)
 		{
