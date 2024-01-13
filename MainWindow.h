@@ -192,7 +192,7 @@ namespace PWTranslator {
 			// 
 			// progressBar1
 			// 
-			this->progressBar1->Location = System::Drawing::Point(15, 160);
+			this->progressBar1->Location = System::Drawing::Point(15, 175);
 			this->progressBar1->Name = L"progressBar1";
 			this->progressBar1->Size = System::Drawing::Size(823, 33);
 			this->progressBar1->TabIndex = 20;
@@ -202,7 +202,7 @@ namespace PWTranslator {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(12, 255);
+			this->label7->Location = System::Drawing::Point(12, 145);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(0, 18);
 			this->label7->TabIndex = 21;
@@ -211,7 +211,7 @@ namespace PWTranslator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(850, 211);
+			this->ClientSize = System::Drawing::Size(850, 228);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->progressBar1);
 			this->Controls->Add(this->button7);
@@ -268,6 +268,10 @@ namespace PWTranslator {
 			this->progressBar1->Increment(1);
 		}
 		progress = L"Translated XML files. Progress: " + to_wstring(files.size()) + L"/" + to_wstring(files.size()) + L"  Completed!";
+		//Cerejo I added this to solve the problem with the counter finishing and not updating the last file and displaying the message
+		this->label7->Text = gcnew String(progress.c_str());
+		this->label7->Update();
+		this->progressBar1->Increment(1);
 		/*this->label7->Text = gcnew String(progress.c_str()); 
 		this->progressBar1->Increment(1);
 
